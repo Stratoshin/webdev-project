@@ -28,7 +28,7 @@ nav{
     margin: 0 auto;
 }
 header{
-    background-color: #1a1a1a;
+    background-color: black;
     width: 100%;
     clear: both;
     content:'';
@@ -237,6 +237,7 @@ footer {
     max-width: 1200px;
     margin: auto;
     align-content: center;
+    width: 100%;
 }
 .footer .element{
     text-align: center;
