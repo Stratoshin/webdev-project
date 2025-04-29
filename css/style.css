@@ -140,16 +140,15 @@ p{
     height: fit-content;
 }
 .grid .item{
-    border: 1px solid white;
     gap:5px;
     display: flex;
     justify-content: center;
 }
 .grid .item img{
-    width: 30%;
-    height: auto;
+    width: 100%;
+    height: 80%;
     display: flex; 
-    margin: 20%;
+    margin: 0px;
 }
 #img1{
     grid-area:img1;
