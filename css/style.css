@@ -127,7 +127,6 @@ nav ul li a::before{
 
 .container-item{
     background-color: #292929;
-    border: 1px solid white;
     padding: 15px;
     text-align: center;
 }
@@ -137,6 +136,10 @@ main h1{
         text-transform: uppercase;
         font-weight: bold;
         grid-column: 1;
+}
+main h3{
+    display: flex;
+    text-align: left;
 }
 .products ul li{
     list-style: none;
@@ -152,7 +155,7 @@ main {
     margin-top: 12vh;
 }
 main img{
-    width: 35%;
+    width: 40%;
     height: auto;
     float: left;
     margin:0px 100px 100px 5px;
