@@ -15,16 +15,23 @@
 <body>
     <header>
         <div class="menu">
-            <nav>
-                <img src="img/company_logo.jpg" alt="company logo">
+            <div class="submenu">
+                <nav class="navbar">
+                    <img src="img/company_logo.jpg" alt="company logo">
 
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/pages/contact_us.html">Contact us</a></li>
-                    <li><a href="/pages/calculator.html">Calculator</a></li>
-                    <li><a href="/pages/media.html">Multimedia</a></li>
-                </ul>
-            </nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-branding">Home</a></li>
+                        <li class="nav-item"><a href="/pages/contact_us.html" class="nav-branding">Contact us</a></li>
+                        <li class="nav-item"><a href="/pages/calculator.html" class="nav-branding">Calculator</a></li>
+                        <li class="nav-item"><a href="/pages/media.html" class="nav-branding">Multimedia</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>  
         </div>
     </header>
     
@@ -64,6 +71,8 @@
 
     </section>
 </footer>
+<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -10,6 +10,12 @@ body{
     
 }
 /* Header */
+header{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top:0;
+}
 header img{
     width: 120px;
     height: 80px;
@@ -17,33 +23,86 @@ header img{
     padding: 8px 0px;
     margin: 0px 75px;
 }
-nav{
-    float: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 .menu{
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
 }
-header{
-    background-color: black;
-    width: 100%;
-    clear: both;
-    content:'';
-    display: table;
+.submenu{
+    width: 85%;
+    margin: auto;
 }
-nav ul li{
+.navbar{
+    width:100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 1.3rem;
+}
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+.bar{
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+@media(max-width:1600px){
+    .container{
+        width:100%;
+    }
+}
+@media(max-width:1024px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity:0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left:-100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: black;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left:0;
+    }
+}
+
+li{
     list-style: none;
-    margin-left: 30px;
-    padding: 25px 0px;
-    float: left;
 }
-nav ul li a{
-    text-decoration: none;
+nav li a{
     color: white;
-    font-weight: bold;
+    text-decoration: none;
 }
 nav ul li a:hover{
     text-decoration: none;
@@ -57,7 +116,6 @@ nav ul li a:focus{
     color: lightpink;
 }
 nav ul li a::before{
-    content: '→ ';
     color: white;
     transition: color 0.3s;
 }
@@ -91,6 +149,7 @@ main h1{
 main {
     margin-bottom: 0px;
     min-height: 70vh;
+    margin-top: 12vh;
 }
 main img{
     width: 35%;
