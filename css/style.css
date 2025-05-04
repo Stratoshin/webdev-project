@@ -213,6 +213,9 @@ p{
         display: block;
         justify-items: center;
     }
+    .grid{_
+    margin-top: 100px;
+    }
 }
 @media (max-width: 1024px){
     main img{
@@ -238,7 +241,7 @@ p{
     display: grid;
     border: 1px solid red;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.15fr 1fr 1fr;
     gap: 5px;
     grid-template-areas: 
               /*COL1     COL2   COL3 */
