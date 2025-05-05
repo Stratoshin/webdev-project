@@ -192,38 +192,13 @@ p{
     text-align: justify;
 }
 /* Main phone responsive*/
-@media (max-width: 1000px) {
+@media (max-width: 539px) {
     main img{
         display: block;
         width: 80%;
         height: auto;
         float: center;
-        margin-top:50px;
-        margin-bottom: 5px;
-        border-radius: 8%;
-        margin-left: 10%;
-        margin-right: auto;
-    }
-    main h1{
-        margin-top: 110px;
-        margin-bottom: 0px;
-    }
-    .container-item{
-        padding: 0px;
-        display: block;
-        justify-items: center;
-    }
-    .grid{
-    margin-top: 100px;
-    }
-}
-@media (max-width: 1024px){
-    main img{
-        display: block;
-        width: 80%;
-        height: auto;
-        float: center;
-        margin-top:50px;
+        margin-top: 10px;
         margin-bottom: 5px;
         border-radius: 8%;
         margin-left: 10%;
@@ -235,13 +210,39 @@ p{
         display: block;
         justify-items: center;
     }
+    main{
+        margin-top: 200px;
+        height: auto;
+    }
+    
+}
+@media (min-width: 1024px){
+    main img{
+        display: block;
+        width: 80%;
+        height: auto;
+        float: center;
+        margin-bottom: 5px;
+        border-radius: 8%;
+        margin-left: 10%;
+        margin-right: auto;
+    }
+
+    .container-item{
+        padding: 0px;
+        display: block;
+        justify-items: center;
+    }
+    main{
+        margin-top: 100px;
+    }
+    
 }
 /* Grid for Media */
 .grid{
     display: grid;
-    border: 1px solid red;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 0.15fr 1fr 1fr;
+    grid-template-rows: 0.10fr 1fr 1fr;
     gap: 5px;
     grid-template-areas: 
               /*COL1     COL2   COL3 */
