@@ -132,12 +132,19 @@ nav ul li a::before{
 .container{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
-
 .container-item{
-    padding: 15px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: justify;
+    align-items: center;
+}
+.container-item img{
+    align-items: center;
+    margin: 0;
+    width: 50%;
+    height: auto;
 }
 main h1{
         color: white;
@@ -171,7 +178,7 @@ main {
 main img{
     width: 40%;
     height: auto;
-    float: left;
+    float: center;
     margin:0px 100px 100px 5px;
     border-radius: 8%;
 }
@@ -204,8 +211,9 @@ p{
 .container-item p{
     width: 80%;
     border: 1px black;
-    margin: 0px 3%;
+    margin: 0px;
     text-align: justify;
+
 }
 /* Main phone responsive*/
 @media (max-width: 539px) {
@@ -272,10 +280,10 @@ p{
     justify-content: center;
 }
 .grid .item img{
-    width: 80%;
+    width: 75%;
     height: auto;
     display: flex; 
-    margin: 0px;
+    margin: 5px;
     border-radius: 5px;
 }
 #img1{
