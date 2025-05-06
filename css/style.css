@@ -209,6 +209,28 @@ p{
 }
 /* Main phone responsive*/
 @media (max-width: 539px) {
+ main img{
+        display: block;
+        width: 80%;
+        height: auto;
+        float: center;
+        margin-bottom: 5px;
+        border-radius: 8%;
+        margin-left: 10%;
+        margin-right: auto;
+    }
+
+    .container-item{
+        padding: 0px;
+        display: block;
+        justify-items: center;
+    }
+    main{
+        margin-top: 100px;
+    }
+    
+}
+@media (max-width: 724px){
     main img{
         display: block;
         width: 80%;
@@ -229,29 +251,6 @@ p{
         margin-top: 200px;
         height: auto;
     }
-    
-}
-@media (min-width: 624px){
-    main img{
-        display: block;
-        width: 80%;
-        height: auto;
-        float: center;
-        margin-bottom: 5px;
-        border-radius: 8%;
-        margin-left: 10%;
-        margin-right: auto;
-    }
-
-    .container-item{
-        padding: 0px;
-        display: block;
-        justify-items: center;
-    }
-    main{
-        margin-top: 100px;
-    }
-    
 }
 /* Grid for Media */
 .grid{
@@ -277,6 +276,7 @@ p{
     height: auto;
     display: flex; 
     margin: 0px;
+    border-radius: 5px;
 }
 #img1{
     grid-area:img1;
