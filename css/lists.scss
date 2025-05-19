@@ -1,0 +1,64 @@
+/* lists.scss */
+
+/* Scope all list styles to the main tag */
+main {
+    /* Base styles for unordered lists */
+    ul {
+        list-style-type: disc;
+        margin-left: 2rem;
+        padding-left: 0;
+        color: #333;
+        font-size: 1rem;
+
+        li {
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #007acc;
+            }
+        }
+    }
+
+    /* Base styles for ordered lists */
+    ol {
+        list-style-type: decimal;
+        margin-left: 2rem;
+        padding-left: 0;
+        color: #333;
+        font-size: 1rem;
+
+        li {
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #d2691e;
+            }
+        }
+    }
+
+    /* Custom class for styled lists */
+    .styled-list {
+        background: #f9f9f9;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+
+        li {
+            padding-left: 1em;
+            position: relative;
+
+            &::before {
+                content: "•";
+                color: #007acc;
+                position: absolute;
+                left: 0;
+                font-size: 1.2em;
+                line-height: 1;
+            }
+        }
+    }
+}

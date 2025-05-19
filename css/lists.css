@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* lists.scss */
+/* Scope all list styles to the main tag */
+main {
+  /* Base styles for unordered lists */
+  /* Base styles for ordered lists */
+  /* Custom class for styled lists */
+}
+main ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  padding-left: 0;
+  color: #333;
+  font-size: 1rem;
+}
+main ul li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+main ul li:hover {
+  color: #007acc;
+}
+main ol {
+  list-style-type: decimal;
+  margin-left: 2rem;
+  padding-left: 0;
+  color: #333;
+  font-size: 1rem;
+}
+main ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+main ol li:hover {
+  color: #d2691e;
+}
+main .styled-list {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+main .styled-list li {
+  padding-left: 1em;
+  position: relative;
+}
+main .styled-list li::before {
+  content: "•";
+  color: #007acc;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}/*# sourceMappingURL=lists.css.map */
