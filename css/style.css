@@ -1,5 +1,5 @@
 /*  */
-@import url(./lists.scss);
+@import "./lists.css";
 * {
   padding: 0;
   margin: 0;
@@ -131,8 +131,7 @@ nav ul li a:hover {
   color: lightpink;
   font-weight: bold;
   transition: 1s;
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+  text-decoration: underline white;
 }
 
 nav ul li a:focus {
@@ -306,7 +305,6 @@ p {
   grid-template-rows: 0.1fr 1fr 1fr;
   gap: 5px;
   grid-template-areas: "titulo  titulo titulo  " "img1    img2    img3   " "img4    img5    img6   ";
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -459,8 +457,7 @@ footer {
 .footer img {
   width: 10%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
   margin: 5px;
@@ -468,4 +465,6 @@ footer {
 
 .footer img:hover {
   transform: scale(1.05);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
