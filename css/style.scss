@@ -1,4 +1,17 @@
 /*  */
+$color-header-bg: black;
+$logo-width: 120px;
+$logo-height: 80px;
+$logo-padding: 8px 0;
+$logo-margin: 0 75px;
+$submenu-width: 85%;
+$primary-color: white;
+$main-img-width: 40%;
+$container-img-width: 50%;
+$margin-main-img: 0 100px 100px 5px;
+$margin-top-main: 12vh;
+$li-margin-left: 30px;
+$li-padding: 25px 0;
 @use "./lists.css";
 
 *{
@@ -21,25 +34,28 @@ body::before {
     margin-bottom: 0px;
 }
 /* Header */
-header{
-    background-color: black;
+header {
+    background-color: $color-header-bg;
     width: 100%;
     position: fixed;
-    top:0;
-}
-header img{
-    width: 120px;
-    height: 80px;
+    top: 0;
+
+    img {
+    width: $logo-width;
+    height: $logo-height;
     float: left;
-    padding: 8px 0px;
-    margin: 0px 75px;
+    padding: $logo-padding;
+    margin: $logo-margin;
 }
-.menu{
+}
+
+.menu {
     width: 100%;
     margin: auto;
 }
-.submenu{
-    width: 85%;
+
+.submenu {
+    width: $submenu-width;
     margin: auto;
 }
 .navbar{
@@ -131,58 +147,71 @@ nav ul li a::before{
     transition: color 0.3s;
 }
 /* Main */
-.container{
-    display: flex;
-    flex-direction: column;
-}
-.container-item{
+.container {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
     display: flex;
     flex-direction: column;
     padding: 0;
     text-align: justify;
     align-items: center;
-}
-.container-item img{
-    align-items: center;
-    margin: 0;
-    width: 50%;
-    height: auto;
-}
-main h1{
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        grid-column: 1;
-}
-main h3{
-    display: flex;
-    text-align: left;
-}
-.calculadora h3{
-    display: block;
-    text-align: center;
-    float: center;
-}
-.products ul li{
-    list-style: none;
-    margin-left: 30px;
-    padding: 25px 0px;
-    float: left;
-    color: white;
+
+    img {
+      align-items: center;
+      margin: 0;
+      width: $container-img-width;
+      height: auto;
+    }
+  }
 }
 
 main {
-    margin-bottom: 0px;
-    min-height: 100vh;
-    margin-top: 12vh;
-}
-main img{
-    width: 40%;
+  margin-bottom: 0;
+  min-height: 100vh;
+  margin-top: $margin-top-main;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-column: 1;
+  }
+
+  h3 {
+    display: flex;
+    text-align: left;
+  }
+
+  img {
+    width: $main-img-width;
     height: auto;
     float: center;
-    margin:0px 100px 100px 5px;
+    margin: $margin-main-img;
     border-radius: 8%;
+  }
+}
+
+.calculadora {
+  h3 {
+    display: block;
+    text-align: center;
+    float: center;
+  }
+}
+
+.products {
+  ul {
+    li {
+      list-style: none;
+      margin-left: $li-margin-left;
+      padding: $li-padding;
+      float: left;
+      color: $primary-color;
+    }
+  }
 }
 main h3{
     color: white;
@@ -277,51 +306,51 @@ p{
     }
 }
 /* Grid for Media */
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 0.10fr 1fr 1fr;
-    gap: 5px;
-    grid-template-areas: 
-              /*COL1     COL2   COL3 */
-    /*Fila 1*/ "titulo  titulo titulo  "
-    /*Fila 2*/ "img1    img2    img3   "
-    /*Fila 3*/ "img4    img5    img6   "
-    ;
-    height: fit-content;
-}
-.grid .item{
-    gap:5px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 5px;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "img1 img2 img3"
+    "img4 img5 img6";
+  height: fit-content;
+
+  .item {
     display: flex;
     justify-content: center;
-}
-.grid .item img{
-    width: 75%;
-    height: auto;
-    display: flex; 
-    margin: 5px;
-    border-radius: 5px;
-}
-#img1{
-    grid-area:img1;
-}
-#img2{
-    grid-area:img2;
-}
-#img3{
-    grid-area:img3;
-}
-#img4{
-    grid-area:img4;
-}
-#img5{
-    grid-area:img5;
-}
-#img6{
-    grid-area:img6;
-}
-#titulo{
-    grid-area:titulo;
+    gap: 5px;
+
+    img {
+      width: 75%;
+      height: auto;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  // Grid area IDs
+  #titulo { grid-area: titulo; }
+  #img1 { grid-area: img1; }
+  #img2 { grid-area: img2; }
+  #img3 { grid-area: img3; }
+  #img4 { grid-area: img4; }
+  #img5 { grid-area: img5; }
+  #img6 { grid-area: img6; }
+
+  // Responsiveness for mobile
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5"
+      "img6";
+  }
 }
 /* Formulario */
 
