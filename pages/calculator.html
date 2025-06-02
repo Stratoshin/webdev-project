@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de rango</title>
-     <!--Style-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
-     <link rel="stylesheet" href="../css/style.css">
-     <!--Fonts-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-     <link rel="icon" href="../img/rivals.ico">
+    <!--Style-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $("select").change(function(){
+            $(this).find("option:selected").each(function(){
+                var optionValue = $(this).attr("value");
+                if(optionValue){
+                    $(".rank").not("."+ optionValue).hide();
+                    $("." + optionValue).show();
+                }
+                    else
+                    {
+                        $(".rank").hide();
+                    }
+                });
+            }).change();
+    });
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/rivals.ico">
 </head>
 <body>
     <header>
@@ -40,12 +57,12 @@
 <!--Body-->
     <main>
         <h1>CALCULADORA</h1>
-
+        <section class="container">
         <section class="calculadora">
             <h3>A que rango te gustaria llegar?</h3>
             <form action="/submit" method="">
                 <select class="controls" name="products" id="products">
-                    <option class="options" value="diamante">Diamante</option>
+                    <option class="options" value="diamante" selected>Diamante</option>
                     <option class="options" value="grandmaster">GrandMaster</option>
                     <option class="options" value="eternity">Eternity</option>
                 </select>
@@ -56,6 +73,67 @@
             <section class="dynamic-item"></section>
             <section class="dynamic-item"></section>
             <section class="dynamic-item"></section>
+        </section>
+        <div class="diamante rank">
+            <section class="container-item">
+            <h3>Seleccionaste el rango de Diamante</h3>
+            <img src="../img/diamond.png" alt="diamond-rank" class="rangos">
+                <section class="pricing-box">
+                <h3>Paquete Diamante</h3>
+                <table>
+                    <tr><th>Rango Final</th><td>Hasta Diamante</td></tr>
+                    <tr><th>Incluye</th><td>Subida desde cualquier rango anterior + reporte de progreso</td></tr>
+                    <tr><th>Tiempo Estimado</th><td>1–2 días</td></tr>
+                    <tr><th>Precio</th><td>$20 USD</td></tr>
+                </table>
+            </section>
+            </section>
+            <p>Llegar a Diamante significa estar por encima de la media y ser un jugador considerado "bueno" según los jugadores de Reddit. </p>
+            <p>El rango Diamante es un indicador de habilidad general en el juego. Recluta a jugadores que han demostrado habilidades superiores a la media. En Marvel Rivals, 
+                los rangos de competencia son una forma de clasificar a los jugadores basándose en su desempeño en partidas competitivas.</p>
+
+                
+        </div>
+        <div class="grandmaster rank">
+            <section class="container-item">
+            <h3>Seleccionaste el rango de Granmaestro</h3>
+            <img src="../img/grandmaster.png" alt="grandmaster-rank" class="rangos">
+            <section class="pricing-box">
+                <h3>Paquete Grand Master</h3>
+                <table>
+                    <tr><th>Rango Final</th><td>Hasta Grand Master</td></tr>
+                    <tr><th>Incluye</th><td>Subida desde Oro/Platino + análisis de jugabilidad + soporte 24/7</td></tr>
+                    <tr><th>Tiempo Estimado</th><td>2–4 días</td></tr>
+                    <tr><th>Precio</th><td>$40 USD</td></tr>
+                </table>
+            </section>
+            </section>
+            <p>Alcanzar y mantener tal rango requiere habilidades incomparables, un amplio conocimiento del juego y un rendimiento impecable bajo presión. 
+                Los jugadores en este nivel muestran coordinación, adaptabilidad y maestría de sus héroes como nadie más</p>
+                <ul>
+                    <li>Representa un nivel de habilidad y clasificación alto dentro del sistema competitivo de Marvel Rivals.</li>
+                    <li>Obtener el rango "Gran Maestro" puede llevar tiempo y dedicación, dependiendo de la habilidad del jugador y la elección de personaje.</li>
+                    <li>Los jugadores que alcanzan este rango pueden recibir recompensas especiales, como crestas que se pueden agregar a sus cartas de jugador. </li>
+                </ul>
+        </div>
+        <div class="eternity rank">
+            <section class="container-item">
+                <h3>Seleccionaste el rango de Eternity</h3>
+                <img src="../img/eternity.webp" alt="eternity-rank" class="rangos">
+                <section class="pricing-box">
+                    <h3>Paquete Eternity</h3>
+                    <table>
+                        <tr><th>Rango Final</th><td>Hasta Eternity</td></tr>
+                        <tr><th>Incluye</th><td>Desde cualquier rango + coaching 1 a 1 + prioridad + seguimiento diario</td></tr>
+                        <tr><th>Tiempo Estimado</th><td>4–6 días</td></tr>
+                        <tr><th>Precio</th><td>$70 USD</td></tr>
+                    </table>
+                </section>
+            </section>
+            <p>¿Buscas alcanzar Eternity, el rango más alto de Marvel Rivals? Este nivel está reservado para los jugadores de élite: aquellos que dominan las mecánicas, 
+                toman decisiones precisas y destacan en cada partida. Nuestro servicio te ayuda a llegar ahí más rápido, ya sea con asesorías personalizadas, mejora de habilidades o impulso competitivo. 
+                Conviértete en leyenda. Llega a Eternity.</p>
+        </div>        
         </section>
     </main>
 

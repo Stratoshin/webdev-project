@@ -123,7 +123,60 @@ header {
         left:0;
     }
 }
+//Precios en calculadora//
+.pricing-box {
+    max-width: 300px;
+    background: #1a1a1a;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 203, 5, 0.3);
+    font-family: Arial, sans-serif;
+  }
 
+  .pricing-box h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffcb05;
+    font-size: 1.4rem;
+  }
+
+  .pricing-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .pricing-box th {
+    text-align: left;
+    padding: 0.5rem 0;
+    color: #ccc;
+    width: 40%;
+  }
+
+  .pricing-box td {
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .pricing-box {
+      display: inline-block;
+      vertical-align: top;
+      margin: 1rem;
+    }
+  }
+div ul li{
+    color: $primary-color;
+}
+.container-item .rangos{
+    width: 25%;
+    height: auto;
+}
+.rank{
+    margin: 0;
+}
 li{
     list-style: none;
 }
