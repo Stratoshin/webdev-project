@@ -160,13 +160,13 @@ header {
     padding: 0.5rem 0;
   }
 
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .pricing-box {
-      display: inline-block;
-      vertical-align: top;
-      margin: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1rem;
     }
-  }
+}
 div ul li{
     color: $primary-color;
 }
@@ -352,6 +352,7 @@ p{
         padding: 0px;
         display: block;
         justify-items: center;
+        align-items: center;
     }
     main{
         margin-top: 200px;
